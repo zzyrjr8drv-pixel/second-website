@@ -1,0 +1,2285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2775.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;New Zealand Election 2026 — Election Desk&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>NZ ELECTION DESK 2026</p>
+<p class="p1"><span class="Apple-converted-space">   </span>Clean UI version</p>
+<p class="p1"><span class="Apple-converted-space">   </span>No animation</p>
+<p class="p1"><span class="Apple-converted-space">   </span>No gradients</p>
+<p class="p1"><span class="Apple-converted-space">   </span>No visual effects</p>
+<p class="p1"><span class="Apple-converted-space">   </span>No external libraries</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">:root {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--page: #f3f5f7;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--surface-alt: #f8fafb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--border: #d9e0e5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--border-dark: #c4cdd4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--text: #17232d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--muted: #657581;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--muted-light: #87949d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent: #1769aa;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--accent-light: #e8f1f8;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--success: #18794e;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--success-bg: #eaf6f0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--warning: #986a00;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--warning-bg: #fff7df;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--danger: #b4232f;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--danger-bg: #fcedef;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">* {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing: border-box;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">html {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>scroll-behavior: smooth;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--page);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family: Arial, Helvetica, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 1.45;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">button,</p>
+<p class="p1">input {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font: inherit;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">button {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.container {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: min(1380px, calc(100% - 32px));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 0 auto;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Header ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.site-header {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>z-index: 20;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.header-inner {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-height: 68px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 28px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.brand {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 17px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>white-space: nowrap;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.brand-mark {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 38px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 38px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #17232d;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.main-nav {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex: 1;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.main-nav button {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 4px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.main-nav button:hover,</p>
+<p class="p1">.main-nav button.active {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #edf1f4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.header-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>white-space: nowrap;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Hero ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.hero {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 38px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1fr 300px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 30px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.eyebrow {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--accent);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.08em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero h1 {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: clamp(42px, 6vw, 76px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: 0.95;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: -0.055em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 12px 0 18px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero-description {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width: 720px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 15px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero-side {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-left: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-left: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.hero-side-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.08em;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.countdown {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 6px 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.date-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Poll strip ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.poll-strip {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow-x: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 13px 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>white-space: nowrap;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.poll-strip strong {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.change-up {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--success);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.change-down {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--danger);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Controls ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.controls {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 15px 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.tabs {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow-x: auto;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.tab {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 9px 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>white-space: nowrap;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.tab:hover,</p>
+<p class="p1">.tab.active {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-color: var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.reset-button {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 9px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 4px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.reset-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-color: var(--border-dark);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Views ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.view {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.view.active {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- General cards ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.card {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--surface);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 6px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card-header {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 17px 18px 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid var(--border);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card-title {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card-subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 3px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card-body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 18px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.badge {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--surface-alt);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 4px 7px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- KPI ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.kpis {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(4, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.kpi {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 18px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.kpi-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0.08em;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.kpi-value {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: -0.04em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 5px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.kpi-note {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 3px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Layout ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.two-column {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1.25fr 0.75fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.two-equal {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1fr 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Poll bars ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.poll-bars {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 14px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.poll-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 48px 1fr 54px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-code {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.poll-track {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #e9edf0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.poll-fill {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.poll-value {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Rankings ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.ranking {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 14px 15px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.rank-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 28px 1fr 55px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #edf0f2;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.rank-row:last-child {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.rank-number {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted-light);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.rank-name {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 700;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.mini-track {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #e9edf0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 5px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.mini-fill {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.rank-value {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Preferred PM ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.pm-list {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 18px 18px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.pm-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1fr 55px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #edf0f2;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.pm-row:last-child {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.pm-name {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 700;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.pm-bar {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #e9edf0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 6px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.pm-fill {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--accent);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.pm-value {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Bloc ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.bloc-body {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 18px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.bloc-number {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 34px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.bloc-caption {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.seat-stack {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>overflow: hidden;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.seat-stack span {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Feed ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.feed-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 75px 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 11px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-top: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.feed-time {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted-light);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Parliament ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.parliament-layout {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1.45fr 0.55fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.parliament-svg {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #fbfcfd;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.seat-legend {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 12px 18px 18px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.legend-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 7px 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 1px solid #edf0f2;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.legend-row:last-child {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-bottom: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.legend-square {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 2px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.legend-seats {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.majority-track {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 12px 18px 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #e9edf0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.majority-fill {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--accent);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.majority-marker {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 50.4%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: -5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 19px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.majority-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: calc(50.4% - 7px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Coalitions ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-grid {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(2, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition.majority {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-color: #b9dccb;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-status {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>float: right;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 4px 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 3px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition.majority .coalition-status {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--success);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-color: #b9dccb;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--success-bg);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-name {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-seats {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: -0.05em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 17px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-seats small {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-meter {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 7px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #e9edf0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-meter-fill {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--accent);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.coalition-note {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 11px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Parties ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.party-grid {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-card {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor: pointer;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-stripe {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>right: 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>top: 0;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-top {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-short {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 23px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-vote {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 19px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-full-name {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin: 4px 0 12px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.chips {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 5px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.chip {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--surface-alt);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 4px 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius: 3px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 8px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-details {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 12px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-card.open .party-details {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: block;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.detail-row {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-top: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 9px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.detail-row strong {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Builder ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.builder {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: 1fr 0.8fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.check-grid {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 14px 18px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>grid-template-columns: repeat(2, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 7px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-check {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 10px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-check:hover {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--surface-alt);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.party-check input {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>accent-color: var(--accent);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.check-seats {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.builder-result {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>min-height: 300px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result-label {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: .08em;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result-number {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 80px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>letter-spacing: -0.06em;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>line-height: .95;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 5px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result-number.good {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--success);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result-message {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 12px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result-meter {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: #e9edf0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top: 22px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result-meter-fill {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: var(--accent);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Footer ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">.footer {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color: var(--muted-light);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size: 9px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding: 25px 0 45px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ---------- Responsive ---------- */</p>
+<p class="p2"><br></p>
+<p class="p1">@media (max-width: 1000px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-side {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>border-top: 1px solid var(--border);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding-left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.two-column,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.two-equal,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.parliament-layout,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.builder {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpis {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: repeat(2, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.party-grid {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: repeat(2, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">@media (max-width: 680px) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: calc(100% - 18px);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header-inner {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>min-height: 58px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.main-nav {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.header-label {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>padding: 28px 22px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero h1 {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>font-size: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.kpis,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.party-grid,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.coalition-grid,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.check-grid {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.controls {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>align-items: flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.reset-button {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header class="site-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container header-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="brand-mark"&gt;NZ26&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Election Desk&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;nav class="main-nav"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="nav-button active" data-view="overview"&gt;Overview&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="nav-button" data-view="parliament"&gt;Parliament&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="nav-button" data-view="coalitions"&gt;Coalitions&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="nav-button" data-view="parties"&gt;Parties&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="nav-button" data-view="builder"&gt;Scenario Lab&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="header-label"&gt;2026 GENERAL ELECTION&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;main class="container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="hero"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="eyebrow"&gt;Aotearoa New Zealand · 2026 General Election&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;The race for 62.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="hero-description"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>A clean MMP election dashboard built around the latest RNZ–Reid Research</p>
+<p class="p1"><span class="Apple-converted-space">                </span>baseline. Labour leads National, the Greens are strong, and TOP sits above</p>
+<p class="p1"><span class="Apple-converted-space">                </span>the 5% threshold.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="hero-side"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="hero-side-label"&gt;Election countdown&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="countdown" id="countdown"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="date-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>7 November 2026 · 123 seats · 62 majority</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="poll-strip" id="pollStrip"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab active" data-view="overview"&gt;Polling&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" data-view="parliament"&gt;Parliament&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" data-view="coalitions"&gt;Coalition Map&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" data-view="parties"&gt;Party Profiles&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="tab" data-view="builder"&gt;Build a Government&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="reset-button" id="resetButton"&gt;Reset&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- OVERVIEW --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="view active" id="overview"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="kpis" id="kpis"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="two-column"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-title"&gt;Latest party vote&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-subtitle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>RNZ–Reid Research · 24 Sep–1 Oct 2026 · n=1,000 · ±3.1%</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="poll-bars" id="pollBars"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-title"&gt;Major-party race&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-subtitle"&gt;Labour versus National&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="ranking" id="ranking"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="two-equal"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-title"&gt;Preferred Prime Minister&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-subtitle"&gt;RNZ–Reid Research&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="pm-list" id="preferredPM"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-title"&gt;Bloc arithmetic&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-subtitle"&gt;Supplied seat scenarios&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bloc-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;Right bloc&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bloc-number" id="rightBloc"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bloc-caption"&gt;National + ACT + NZ First&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="seat-stack" id="rightStack"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;br&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;strong&gt;Left bloc&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bloc-number" id="leftBloc"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bloc-caption"&gt;Labour + Greens + Te Pāti Māori&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="seat-stack" id="leftStack"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;article class="card" style="margin-top:10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-title"&gt;Election desk notes&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-subtitle"&gt;Static interface information — not a live news feed&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="deskFeed"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- PARLIAMENT --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="view" id="parliament"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="parliament-layout"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-title"&gt;Projected Parliament&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-subtitle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>123 seats · coloured dots represent the supplied projection</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="majority-track"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="majority-fill" id="majorityFill"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="majority-marker"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="majority-label"&gt;62&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;svg</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>id="parliamentSVG"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>class="parliament-svg"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>viewBox="0 0 1000 590"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>role="img"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>aria-label="Projected New Zealand Parliament"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-title"&gt;Seat ledger&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-subtitle"&gt;Current projection&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="seat-legend" id="seatLegend"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- COALITIONS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="view" id="coalitions"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-header" style="padding-left:0; padding-right:0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;Coalition map&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-subtitle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Arithmetic scenarios only. Political compatibility is a separate question.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="coalition-grid" id="coalitionGrid"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- PARTIES --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="view" id="parties"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="card-header" style="padding-left:0; padding-right:0;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-title"&gt;Party profiles&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card-subtitle"&gt;Select a party card for additional information.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="party-grid" id="partyGrid"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- BUILDER --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="view" id="builder"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="builder"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="card-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-title"&gt;Build a government&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="card-subtitle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Select parties and test the 62-seat majority.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="check-grid" id="checkGrid"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;article class="card builder-result"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="result-label"&gt;Combined seats&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="result-number" id="resultNumber"&gt;0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="result-message" id="resultMessage"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Select parties to test a government.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="result-meter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="result-meter-fill" id="resultMeter"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/article&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;NZ26 Election Desk&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;Baseline: RNZ–Reid Research · 24 Sep–1 Oct 2026&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">"use strict";</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>DATA</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">const DATA = {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"electionDate": "2026-11-07T00:00:00",</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"totalSeats": 123,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"majority": 62,</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>"poll": {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"pollster": "RNZ–Reid Research",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"fieldwork": "24 Sep – 1 Oct 2026",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"sample": 1000,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"margin": "±3.1%"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>},</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>"parties": [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"id": "lab",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"short": "LAB",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Labour",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"vote": 30.8,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 37,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"color": "#d71920",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"side": "Left",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"leader": "Chris Hipkins",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"change": -1.4</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"id": "nat",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"short": "NAT",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "National",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"vote": 25.9,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 32,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"color": "#00529b",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"side": "Right",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"leader": "Christopher Luxon",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"change": -3.2</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"id": "grn",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"short": "GRN",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Green Party",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"vote": 14.8,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 18,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"color": "#008c45",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"side": "Left",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"leader": "Chlöe Swarbrick",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"change": 4.6</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"id": "nzf",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"short": "NZF",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "NZ First",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"vote": 10.6,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 13,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"color": "#111111",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"side": "Right",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"leader": "Winston Peters",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"change": -1.3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"id": "act",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"short": "ACT",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "ACT",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"vote": 9.0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 11,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"color": "#f5d000",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"side": "Right",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"leader": "David Seymour",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"change": 1.3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"id": "top",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"short": "TOP",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "The Opportunities Party",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"vote": 5.5,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 7,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"color": "#ef8b23",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"side": "Wildcard",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"leader": "TOP",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"change": 0.2</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"id": "tpm",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"short": "TPM",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Te Pāti Māori",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"vote": 2.0,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 5,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"color": "#6b2c91",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"side": "Māori / Left",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"leader": "Te Pāti Māori",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"change": -1.0</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>],</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>"coalitions": [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "National + ACT + NZ First",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 56,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"status": "Short",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"note": "Six seats below the 62-seat majority line."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Labour + Greens + Te Pāti Māori",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 60,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"status": "Short",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"note": "Two seats below the majority line."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Labour + Greens + TOP",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 62,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"status": "Majority",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"note": "Exactly reaches the 62-seat threshold."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Labour + Greens + Te Pāti Māori + TOP",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 67,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"status": "Majority",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"note": "Five seats above the majority line."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "National + ACT + NZ First + TOP",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 63,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"status": "Majority",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"note": "Numerically viable, though political compatibility is separate."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Labour + Greens + NZ First",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"seats": 68,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"status": "Majority",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"note": "Numerically clears the threshold."</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>],</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>"preferredPM": [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Chris Hipkins",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"value": 21.9</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Christopher Luxon",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"value": 17.1</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Winston Peters",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"value": 11.2</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"name": "Chlöe Swarbrick",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"value": 8.7</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>]</p>
+<p class="p1">};</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>HELPERS</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function byId(id) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return document.getElementById(id);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function all(selector) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return Array.from(document.querySelectorAll(selector));</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>COUNTDOWN</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function updateCountdown() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const target = new Date(DATA.electionDate).getTime();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const now = Date.now();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const difference = target - now;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (difference &lt;= 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>byId("countdown").textContent = "Election day";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const days = Math.floor(difference / 86400000);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const hours = Math.floor(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>(difference % 86400000) / 3600000</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const minutes = Math.floor(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>(difference % 3600000) / 60000</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("countdown").textContent =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>days + "d " +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>hours + "h " +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>minutes + "m";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>POLL STRIP</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderPollStrip() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sorted = DATA.parties</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slice()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sort(function(a, b) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return b.vote - a.vote;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("pollStrip").innerHTML = sorted.map(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const direction =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>party.change &gt;= 0 ? "▲" : "▼";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const changeClass =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>party.change &gt;= 0</p>
+<p class="p1"><span class="Apple-converted-space">                </span>? "change-up"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>: "change-down";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"&lt;span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;strong&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>party.short +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/strong&gt; " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>party.vote.toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"% " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;span class='" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>changeClass +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>direction +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>" " +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Math.abs(party.change).toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"&lt;/span&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>KPIs</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderKPIs() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sorted = DATA.parties</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slice()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sort(function(a, b) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return b.vote - a.vote;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const labour = DATA.parties.find(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return party.id === "lab";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const national = DATA.parties.find(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return party.id === "nat";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rightSeats = 32 + 11 + 13;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const kpis = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>label: "Party vote leader",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>value: sorted[0].short,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>note: sorted[0].vote.toFixed(1) + "%"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>label: "Labour lead",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>value:</p>
+<p class="p1"><span class="Apple-converted-space">                </span>(labour.vote - national.vote).toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>" pts",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>note: "over National"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>label: "Right bloc",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>value: rightSeats,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>note: "6 short of majority"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>label: "TOP",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>value: "5.5%",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>note: "above 5% threshold"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("kpis").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>kpis.map(function(kpi) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;article class='card kpi'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;div class='kpi-label'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>kpi.label +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;div class='kpi-value'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>kpi.value +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;div class='kpi-note'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>kpi.note +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/article&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>PARTY POLL BARS</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderPollBars() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const sorted = DATA.parties</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slice()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sort(function(a, b) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return b.vote - a.vote;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("pollBars").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sorted.map(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;div class='poll-row'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span class='party-code'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>party.short +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;div class='poll-track'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div " +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"class='poll-fill' " +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"style='width:" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>(party.vote / 35) *</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>100</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>).toFixed(2) +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"%;background:" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>party.color +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>";'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span class='poll-value'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>party.vote.toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"%" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/div&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>RANKING</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderRanking() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const labour = DATA.parties.find(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return party.id === "lab";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const national = DATA.parties.find(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return party.id === "nat";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const gap =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>labour.vote - national.vote;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rows = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>labour,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>national</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("ranking").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>rows.map(function(party, index) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;div class='rank-row'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span class='rank-number'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"0" + (index + 1) +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='rank-name'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>party.name +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='mini-track'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;div " +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"class='mini-fill' " +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"style='width:" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>(party.vote / 35) *</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>100</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>).toFixed(2) +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"%;background:" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.color +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>";'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span class='rank-value'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>party.vote.toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"%" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/div&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).join("") +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"&lt;div class='rank-row'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;span class='rank-number'&gt;Δ&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;div class='rank-name'&gt;Labour lead&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;span class='rank-value'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>gap.toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>" pts" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"&lt;/div&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>PREFERRED PM</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderPreferredPM() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("preferredPM").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.preferredPM.map(function(item) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;div class='pm-row'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='pm-name'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>item.name +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='pm-bar'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;div " +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"class='pm-fill' " +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"style='width:" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>(item.value / 25) *</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>100</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>).toFixed(2) +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"%;'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;div class='pm-value'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>item.value.toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"%" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/div&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>BLOCS</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderBlocs() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const right = DATA.parties.filter(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"nat",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"act",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"nzf"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>].indexOf(party.id) !== -1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const left = DATA.parties.filter(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"lab",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"grn",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"tpm"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>].indexOf(party.id) !== -1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rightSeats = right.reduce(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function(total, party) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return total + party.seats;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const leftSeats = left.reduce(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function(total, party) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return total + party.seats;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>0</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("rightBloc").textContent =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>rightSeats +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>" / " +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.majority;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("leftBloc").textContent =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>leftSeats +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>" / " +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.majority;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function stackHTML(parties) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return parties.map(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;span " +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"style='width:" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>(party.seats /</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>DATA.totalSeats) *</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>100</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>).toFixed(3) +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"%;background:" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>party.color +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>";'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/span&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).join("");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("rightStack").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stackHTML(right);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("leftStack").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stackHTML(left);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>DESK NOTES</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderDeskFeed() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const notes = [</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Labour is the largest party on the latest party-vote baseline.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"National + ACT + NZ First reaches 56 seats in the supplied projection.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Labour + Greens + Te Pāti Māori reaches 60 seats.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"TOP is above the 5% MMP threshold at 5.5%.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"Labour + Greens + TOP reaches exactly 62 seats.",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"These figures are a dashboard baseline, not a live election-night count."</p>
+<p class="p1"><span class="Apple-converted-space">    </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("deskFeed").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>notes.map(function(note, index) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;div class='feed-row'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span class='feed-time'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"NOTE 0" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>(index + 1) +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>note +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/div&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>PARLIAMENT SVG</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderParliament() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const svg = byId("parliamentSVG");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const seats = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/*</p>
+<p class="p1"><span class="Apple-converted-space">       </span>123 seats arranged in stable horizontal rows.</p>
+<p class="p1"><span class="Apple-converted-space">       </span>This deliberately avoids complex SVG arcs so the layout</p>
+<p class="p1"><span class="Apple-converted-space">       </span>remains predictable on desktop and mobile browsers.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*/</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let seatNumber = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (let row = 0; row &lt; 8; row++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const count =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>row &lt; 7 ? 16 : 11;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const spacing = 50;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const width =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>(count - 1) * spacing;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const startX =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>(1000 - width) / 2;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const y =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>75 + row * 58;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let column = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>column &lt; count;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>column++</p>
+<p class="p1"><span class="Apple-converted-space">        </span>) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>seatNumber &gt;=</p>
+<p class="p1"><span class="Apple-converted-space">                </span>DATA.totalSeats</p>
+<p class="p1"><span class="Apple-converted-space">            </span>) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>break;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>seats.push({</p>
+<p class="p1"><span class="Apple-converted-space">                </span>x:</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>startX +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>column * spacing,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>y: y</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>seatNumber++;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const allocation = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>DATA.parties.forEach(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>for (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let i = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>i &lt; party.seats;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>i++</p>
+<p class="p1"><span class="Apple-converted-space">        </span>) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>allocation.push(party);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let svgContent = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>seats.forEach(function(seat, index) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const party =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>allocation[index];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>svgContent +=</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"&lt;circle " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"cx='" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>seat.x +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"' " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"cy='" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>seat.y +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"' " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"r='13' " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"fill='" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>party.color +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"' " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"stroke='#ffffff' " +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"stroke-width='1'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;title&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>party.name +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>" — projected seat " +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>(index + 1) +</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/title&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>"&lt;/circle&gt;";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>svgContent +=</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"&lt;text " +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"x='500' " +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"y='555' " +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"text-anchor='middle' " +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"fill='#657581' " +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"font-size='12'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"123 projected seats · majority = 62" +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"&lt;/text&gt;";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>svg.innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>svgContent;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const totalSeats =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.parties.reduce(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(total, party) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return total +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>party.seats;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("majorityFill").style.width =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>(totalSeats /</p>
+<p class="p1"><span class="Apple-converted-space">                </span>DATA.totalSeats) *</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100</p>
+<p class="p1"><span class="Apple-converted-space">        </span>).toFixed(2) +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"%";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("seatLegend").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.parties</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.slice()</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.sort(function(a, b) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return b.seats -</p>
+<p class="p1"><span class="Apple-converted-space">                </span>a.seats;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.map(function(party) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;div class='legend-row'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span " +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"class='legend-square' " +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"style='background:" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>party.color +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>";'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>party.name +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;span class='legend-seats'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>party.seats +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>"&lt;/div&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}).join("");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>COALITIONS</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderCoalitions() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("coalitionGrid").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.coalitions.map(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(coalition) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const isMajority =</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>coalition.seats &gt;=</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>DATA.majority;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;article class='card coalition " +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>isMajority</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>? "majority"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>: ""</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>) +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;span class='coalition-status'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>coalition.status +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='coalition-name'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>coalition.name +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='coalition-seats'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>coalition.seats +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>" &lt;small&gt;SEATS&lt;/small&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='coalition-meter'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;div " +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"class='coalition-meter-fill' " +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"style='width:" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>Math.min(</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>100,</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>coalition.seats /</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>DATA.majority</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>) * 100</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>).toFixed(2) +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"%;'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/div&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='coalition-note'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>coalition.note +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/article&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>).join("");</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>PARTY PROFILES</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderParties() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("partyGrid").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.parties.map(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(party) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const change =</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>party.change &gt;= 0</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>? "+"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>: ""</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>) +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>party.change.toFixed(1);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const thresholdText =</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>party.vote &gt;= 5</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>? "Above 5% threshold"</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>: "Below 5% threshold";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;article class='card party-card'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div " +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"class='party-stripe' " +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"style='background:" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.color +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>";'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='party-top'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;div class='party-short'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.short +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;div class='party-vote'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.vote.toFixed(1) +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"%" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='party-full-name'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>party.name +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='chips'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;span class='chip'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.side +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;span class='chip'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.seats +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>" seats" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;span class='chip'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.leader +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;div class='party-details'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;div class='detail-row'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"&lt;span&gt;Poll change&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"&lt;strong&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>change +</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>" pts" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"&lt;/strong&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;div class='detail-row'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"&lt;span&gt;MMP status&lt;/span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"&lt;strong&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>thresholdText +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>"&lt;/strong&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/div&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/article&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>all(".party-card").forEach(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function(card) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>card.addEventListener(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"click",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>function() {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>card.classList.toggle(</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"open"</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>GOVERNMENT BUILDER</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function renderBuilder() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("checkGrid").innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>DATA.parties.map(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(party) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;label class='party-check'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;input " +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"type='checkbox' " +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"value='" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.id +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"'&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;span " +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"style='width:8px;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"height:8px;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"border-radius:2px;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>"background:" +</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>party.color +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>";'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;span&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>party.short +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;span class='check-seats'&gt;" +</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>party.seats +</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>"&lt;/span&gt;" +</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"&lt;/label&gt;"</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>all("#checkGrid input")</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.forEach(function(input) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>input.addEventListener(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"change",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>updateBuilder</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updateBuilder() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const selected =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>all("#checkGrid input:checked")</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.map(function(input) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return input.value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const seats =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>selected.reduce(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function(total, id) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const party =</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>DATA.parties.find(</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>function(p) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return p.id === id;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>return total +</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>party</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>? party.seats</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>: 0</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const number =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>byId("resultNumber");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>number.textContent =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>seats;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>number.classList.toggle(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"good",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>seats &gt;= DATA.majority</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (selected.length === 0) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>byId("resultMessage")</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.textContent =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Select parties to test a government.";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else if (</p>
+<p class="p1"><span class="Apple-converted-space">        </span>seats &gt;= DATA.majority</p>
+<p class="p1"><span class="Apple-converted-space">    </span>) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const difference =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>seats - DATA.majority;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>byId("resultMessage")</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.textContent =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>difference +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>" seat" +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>difference === 1</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>? ""</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>: "s"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>) +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>" above the majority line.";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const difference =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>DATA.majority - seats;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>byId("resultMessage")</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.textContent =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>difference +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>" seat" +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>difference === 1</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>? ""</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>: "s"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>) +</p>
+<p class="p1"><span class="Apple-converted-space">            </span>" short of a majority.";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>byId("resultMeter").style.width =</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Math.min(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>seats /</p>
+<p class="p1"><span class="Apple-converted-space">                </span>DATA.majority</p>
+<p class="p1"><span class="Apple-converted-space">            </span>) * 100</p>
+<p class="p1"><span class="Apple-converted-space">        </span>).toFixed(2) +</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"%";</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>NAVIGATION</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function switchView(viewId) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>all(".view").forEach(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function(view) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>view.classList.toggle(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"active",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>view.id === viewId</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>all("[data-view]").forEach(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function(button) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>button.classList.toggle(</p>
+<p class="p1"><span class="Apple-converted-space">                </span>"active",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>button.dataset.view === viewId</p>
+<p class="p1"><span class="Apple-converted-space">            </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.scrollTo({</p>
+<p class="p1"><span class="Apple-converted-space">        </span>top: 0,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>behavior: "auto"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">all("[data-view]").forEach(</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function(button) {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>button.addEventListener(</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"click",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>function() {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>switchView(</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.dataset.view</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">);</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>RESET</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">byId("resetButton")</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.addEventListener(</p>
+<p class="p1"><span class="Apple-converted-space">        </span>"click",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function() {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>all("#checkGrid input")</p>
+<p class="p1"><span class="Apple-converted-space">                </span>.forEach(</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>function(input) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>input.checked =</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>false;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateBuilder();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p2"><br></p>
+<p class="p1">/* =========================================================</p>
+<p class="p1"><span class="Apple-converted-space">   </span>INITIALISE</p>
+<p class="p1"><span class="Apple-converted-space">   </span>========================================================= */</p>
+<p class="p2"><br></p>
+<p class="p1">function initialise() {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderPollStrip();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderKPIs();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderPollBars();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderRanking();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderPreferredPM();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderBlocs();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderDeskFeed();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderParliament();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderCoalitions();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderParties();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderBuilder();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateBuilder();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateCountdown();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">initialise();</p>
+<p class="p2"><br></p>
+<p class="p1">setInterval(</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateCountdown,</p>
+<p class="p1"><span class="Apple-converted-space">    </span>30000</p>
+<p class="p1">);</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
